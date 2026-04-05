@@ -1,16 +1,29 @@
 # 25331a05d8-ARRAY
 #include <stdio.h>
-void display array(int arr[],int size);
-int main(){
-int numbers[5]={10,20,30,40,50};
- display array(numbers[5]);
-return 0;
+
+
+void display(int arr[], int n) {
+    int i;
+    printf("Array elements are:\n");
+    for(i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
 }
-void display array(int arr[],int size){
-int i;
-printf("array elements are:\n");
-for(i=0;i < size;i++){
-printf("%d",arr[i]);
+
+int main() {
+    int arr[100], n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter array elements:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+   
+    display(arr, n);
+
+    return 0;
 }
-printf("\n");
-}
+
